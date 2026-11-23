@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open POS — Privacy Policy</title>
+<style>
+:root{--bg:#0b0e18;--card:#12161f;--fg:#e8eaf0;--mut:#9aa1b2;--acc:#2dd4bf;--line:#232838}
+@media (prefers-color-scheme:light){:root{--bg:#f6f7fb;--card:#fff;--fg:#141824;--mut:#555d70;--acc:#0f8c7e;--line:#e3e6ef}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 16px 64px}
+header{display:flex;gap:14px;align-items:center;margin-bottom:28px}header img{width:56px;height:56px;border-radius:14px}
+h1{margin:0;font-size:28px}h2{font-size:19px;margin:32px 0 8px}p,li{color:var(--mut)}strong{color:var(--fg)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:20px 0}
+a{color:var(--acc)}small{color:var(--mut)}
+table{width:100%;border-collapse:collapse;margin:14px 0}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);font-size:15px;color:var(--mut);vertical-align:top}
+th{color:var(--fg);font-weight:600}
+</style>
+</head>
+<body>
+<main>
+<header><img src="icon.png" alt=""><div><h1>Open POS</h1><small>Privacy Policy · Last updated 23 November 2026</small></div></header>
+
+<div class="card"><p><strong>In short:</strong> Open POS has no account, no sign-up, and no server of ours that stores your sales. Everything it records — products, carts, prices, takings — lives on your own counter PC. We never receive it, and there is no advertising, analytics or tracking of any kind in either app.</p></div>
+
+<h2>What this covers</h2>
+<p>Open POS is a point-of-sale system in two halves, and this policy covers both:</p>
+<ul>
+<li><strong>Open POS</strong> — the Windows program that runs on the shop's counter PC.</li>
+<li><strong>Open POS Scanner</strong> — the Android app that turns a phone into the barcode scanner for that counter.</li>
+</ul>
+
+<h2>What the Android app holds on the phone</h2>
+<table>
+<tr><th>What</th><th>Why</th><th>Where it goes</th></tr>
+<tr><td>Camera frames</td><td>To read barcodes</td><td>Analysed on the phone, frame by frame, and discarded. No photo or video is saved, and none is transmitted.</td></tr>
+<tr><td>Barcode text</td><td>To add the item to the bill</td><td>Sent to the paired counter PC only.</td></tr>
+<tr><td>A random install ID</td><td>So the counter can tell two phones apart</td><td>Sent to the paired counter PC only. Generated on the device; it is not your advertising ID and is not linked to you.</td></tr>
+<tr><td>The pending queue</td><td>So a scan survives a dropped connection</td><td>Stored in the app's private storage until the counter confirms it. Cleared on confirmation, and removed entirely when the app is uninstalled.</td></tr>
+</table>
+
+<h2>What we collect</h2>
+<p>Nothing. Neither app contains an analytics SDK, a crash reporting service, an advertising network, or a third-party tracker. We do not hold a copy of your products, your prices, your sales, or your customers.</p>
+
+<h2>The two ways the phone reaches the counter</h2>
+<p><strong>Offline (LAN)</strong> — the default. The phone talks straight to your own PC over your own wifi. Nothing leaves the shop's network, and the internet is not involved at all.</p>
+<p><strong>Online (Cloud)</strong> — optional, for a phone on mobile data or a different network. The messages travel through a relay server, which pairs the two ends and passes the frames between them. The relay does not open, store or log the contents of a bill; it holds only the short-lived pairing code and the two live connections, and forgets both when the connection closes. The source of the relay ships with the product, so a shop can run its own — in which case nothing passes through us at all.</p>
+
+<h2>Permissions, and why each one is asked for</h2>
+<ul>
+<li><strong>Camera</strong> — to read barcodes. The preview is on screen while it is in use.</li>
+<li><strong>Internet / network state / wifi state</strong> — to reach the counter PC, and to notice when the connection drops so the queue can take over.</li>
+<li><strong>Multicast</strong> — to find the counter on the shop's wifi without anyone typing an IP address.</li>
+<li><strong>Vibrate</strong> — the buzz that confirms a scan.</li>
+</ul>
+<p>The app asks for no contacts, no location, no files, no microphone, and no phone identity.</p>
+
+<h2>The Windows program</h2>
+<p>It stores its catalogue, carts and sales in files on that PC, under your own Windows user account. It does not send them anywhere. It opens a port on the local network so the phone can connect, and advertises itself over mDNS and a small UDP broadcast so the phone can find it. A phone may only join by presenting the pairing token shown on your own screen — being on the same wifi is not, by itself, permission to join the till.</p>
+
+<h2>What we do not do</h2>
+<ul>
+<li>We do not collect, sell or share personal data.</li>
+<li>No accounts, no sign-in, no advertising, no tracking, no analytics.</li>
+<li>We have no access to your PC, your phone, or your shop's records.</li>
+</ul>
+
+<h2>Children</h2>
+<p>Open POS is a tool for running a shop. It is not directed at children and we do not knowingly collect anything from them.</p>
+
+<h2>Deleting your data</h2>
+<p>Uninstalling the Android app removes everything it held, including the pending queue. Your sales live on the counter PC; deleting them there deletes them, because there is no other copy.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be posted on this page with a new date.</p>
+
+<h2>Contact</h2>
+<p>Questions about privacy, or a request about data: <a href="mailto:0.epicproject@gmail.com">0.epicproject@gmail.com</a></p>
+</main>
+</body>
+</html>
